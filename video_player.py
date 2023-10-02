@@ -20,7 +20,7 @@ from ventana2 import MiVentana2
 
 class MiVentana(QMainWindow):
 
-    signal_abrir_ventana2 = Signal()
+    signal_abrir_ventana2 = Signal(str)
     
 
     def __init__(self):
@@ -64,7 +64,7 @@ class MiVentana(QMainWindow):
         print("Texto en el QLineEdit:", texto)
 
 
-        self.signal_abrir_ventana2.emit()
+        self.signal_abrir_ventana2.emit(texto)
         self.close()
         
         # Cerrar esta ventana
