@@ -68,7 +68,8 @@ class MiVentana2(QMainWindow):
         self._player.setSource(url)
         self._player.play()
 
-    def mostrar_ventana(self):
+    def mostrar_ventana(self, nombre):
+        self.set_nombre(nombre)
         self.show()
 
     def set_nombre(self, nombre):
