@@ -22,7 +22,7 @@ class MiVentana2(QMainWindow):
         super().__init__()
         
         loader = QUiLoader()
-        self.ui = loader.load('ventana2.ui')
+        self.ui = loader.load('vistas/ventana2.ui')
 
         self.resize(800, 600)
         self.setCentralWidget(self.ui)

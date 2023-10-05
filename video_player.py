@@ -1,7 +1,6 @@
 import os
 os.environ["QT_LOGGING_RULES"] = '*.debug=false;qt.pysideplugin=false'
 import sys
-import time
 from PySide6 import QtCore
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout
 from PySide6.QtMultimedia import QMediaPlayer
@@ -27,7 +26,7 @@ class MiVentana(QMainWindow):
         super().__init__()
         
         loader = QUiLoader()
-        self.ui = loader.load('cargar_video.ui')
+        self.ui = loader.load('vistas/cargar_video.ui')
 
         self.resize(800, 600)
         self.setCentralWidget(self.ui)
@@ -66,21 +65,6 @@ class MiVentana(QMainWindow):
 
         self.signal_abrir_ventana2.emit(texto)
         self.close()
-        
-        # Cerrar esta ventana
-        
-        # Crear una nueva instancia de QApplication si no tienes una ya
-        #app = QApplication.instance()
-        #if app is None:
-         #   app = QApplication([])
-        
-        #self.close()
-    
-        #run_window_(texto)
-
-        # Abrir una nueva ventana
-        #self.close()
-        
         
 
 

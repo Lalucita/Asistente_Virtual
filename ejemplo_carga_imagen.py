@@ -10,7 +10,7 @@ class MyWidget(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         self.loader = QUiLoader()
-        self.window = self.loader.load("widget.ui", None)
+        self.window = self.loader.load("vistas/widget.ui", None)
         self.window.setWindowTitle("User data")
         self.window.submit_button.clicked.connect(self.load_image)
         self.setup_ui()

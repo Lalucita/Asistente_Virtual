@@ -110,7 +110,7 @@ class MainWindow(QMainWindow):
         self._player.playbackStateChanged.connect(self.update_buttons)
         self._player.setVideoOutput(self._video_widget)
 
-        ruta_del_archivo = 'test.mp4'
+        ruta_del_archivo = 'Avatar/buenas_tardes_avatar.mp4'
         url = QtCore.QUrl.fromLocalFile(ruta_del_archivo)
 
         self._player.setSource(url)
